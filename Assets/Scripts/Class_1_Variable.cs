@@ -8,10 +8,12 @@
 
 
 // 引用 Unity 遊戲引擎的函式庫(開發遊戲的程式集合、命名空間)
+using UnityEditor;
 using UnityEngine;
 
 // 修飾詞 類別關鍵字(腳本) 類別名稱(腳本名稱)
-public class NewEmptyCSharpScript
+// 在腳本後添加 MonoBehaviour 可讓此腳本掛在 Uuity 的物件上
+public class NewEmptyCSharpScript : MonoBehaviour 
 {
     // 程式內的括號都是成對出現的 () {} [] <> '' ""
     // class {} 此類別的程式內容
@@ -22,9 +24,15 @@ public class NewEmptyCSharpScript
 
 
     // 變數語法 :
-    // 變數資料類型 變數名稱；
+    // 修飾詞 變數資料類型 變數名稱;
+    // 修飾詞 變數資料類型 變數名稱 指定 預設值; (指定 預設值 可省略)
     // 資料類型 : 告訴記憶體可以放入哪些資料，例如 : 整數 int 可以放入沒有小數點的數值
     // 變數名稱 : 習慣用小寫開頭命名、駝峰式命名，規則與腳本名稱相同
+    // 公開 : 允許其他類別存取，顯示在屬性面板上 public
+    // 私人 : 禁止其他類別存取，隱藏在屬性面板上 public (預設)
+    public int coin = 500;
+    private int level = 3;
+
 }
 
 // 類別外，不要將程式寫在這裡
